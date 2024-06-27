@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신탄진고등학교 소개</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            overflow: hidden;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .navbar img {
+            height: 40px; /* 이미지 높이 조정 */
+            margin-right: 10px;
+        }
+        .navbar a {
+            color: #fff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #555;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center; /* 가운데 정렬 */
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .contact-info p {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#">
+            <img src="school-logo.png" alt="학교 로고">
+            신탄진고등학교
+        </a>
+        <a href="#">역사</a>
+        <a href="#">교육 프로그램</a>
+        <a href="#">캠퍼스</a>
+        <a href="javascript:void(0);" onclick="openGreeting()">교직원 인사말</a> <!-- 교직원 인사말 링크 -->
+        <a href="#">문의</a>
+    </div>
+
+    <div class="container">
+        <h1>신탄진고등학교 소개 페이지</h1>
+        <div class="highlight">
+            <p>안녕하세요! 신탄진고등학교를 소개하는 페이지입니다.</p>
+        </div>
+        
+        <h2>학교 역사</h2>
+        <p>신탄진고등학교는 1982년 개교하여 41년 역사를 가지고 있는 남녀공학 공립 고등학교입니다.</p>
+        
+        <h2>교육 프로그램</h2>
+        <p>우리 학교는 과학, 예술, 스포츠 등 다양한 분야에서 교육 프로그램을 제공하고 있습니다. 학생들은 자신의 잠재력을 최대한 발휘할 수 있습니다.</p>
+        
+        <h2>캠퍼스</h2>
+        <p>신탄진고등학교는 넓은 캠퍼스를 자랑하며, 최신 시설과 편리한 학습 환경을 제공합니다.</p>
+        
+        <div class="contact-info">
+            <h2>문의</h2>
+            <p>더 많은 정보를 원하시면, 아래 연락처로 문의해 주세요.</p>
+            <p>전화: xxx-xxxx-xxxx | 이메일: contact@example.com</p>
+        </div>
+    </div>
+
+    <script>
+        function openGreeting() {
+            var greetingText = `신탄진고등학교 홈페이지 방문을 진심으로 환영합니다.<br><br>
+                                본교는 1982년 개교하여 41년 역사를 가지고 있는 남녀공학 공립 고등학교입니다.<br><br>
+                                신탄진고 교육가족은 ‘바른인성과 꿈을 길러주는 행복한 학교’를 만들기 위하여 ‘성실, 창의, 근면’을 교훈으로 삼아 모두 한마음이 되어 열심히 노력하고 있습니다.<br><br>
+                                미래를 위해 도전하는 학생(학생상), 사랑과 실력을 겸비한 교사(교사상), 교육가족 모두가 행복한 학교(학교상)를 만들기 위하여 학부모님들의 많은 관심과 격려를 바랍니다.<br><br>
+                                감사합니다.`;
+
+            var newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <!DOCTYPE html>
+                <html lang="ko">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>교직원 인사말 - 신탄진고등학교</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            background-color: #f0f0f0;
+                            margin: 0;
+                            padding: 20px;
+                            text-align: center;
+                        }
+                        h1 {
+                            color: #333;
+                            margin-bottom: 20px;
+                        }
+                        p {
+                            color: #666;
+                            text-align: justify;
+                            line-height: 1.6;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>교직원 인사말 - 신탄진고등학교</h1>
+                    <p>${greetingText}</p>
+                </body>
+                </html>
+            `);
+            newWindow.document.close();
+        }
+    </script>
+</body>
+
+</html>
